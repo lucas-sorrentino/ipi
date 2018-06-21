@@ -1,7 +1,7 @@
 class AssistantController < ApplicationController
   def messenger
   	puts(params)
-    query = (params[:palavra_chave]
+    query = params[:palavra_chave]
     page = WikipediaConsulter.find_by_name(query)
 
     if page.text.present?
